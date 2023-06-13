@@ -1,4 +1,11 @@
+import express from 'express';
 import { sum } from './example/sum';
 
-console.log('hello world!');
-console.log(sum(1, 2));
+const app = express();
+
+app.get('/endpoint', function (req, res) {
+  const added = sum(1, 2);
+  res.send(`hello world: ${added}`);
+});
+
+app.listen(3000);
