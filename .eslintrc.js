@@ -2,6 +2,7 @@ const config = {
   env: {
     browser: true,
     es6: true,
+    jest: true,
   },
   extends: ['eslint:recommended', 'eslint-config-prettier'],
   globals: {
@@ -17,4 +18,4 @@ const config = {
   rules: {},
 };
 
-module.export = config;
+module.exports = config;
